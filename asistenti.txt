@@ -1,0 +1,15 @@
+Pop,Ioana,2940101123456,F,30,01.01.1994,Bucuresti,2,romana,asistent,studii superioare,5,2,Medicina Interna,2,4.75
+Culercu,Mihai,1930202123456,M,31,02.02.1993,Bucuresti,3,romana,asistent,studii superioare,7,1,Alergologie,2,9.2
+Marin,Elena,2910303123456,F,33,03.03.1991,Bucuresti,4,romana,asistent,studii superioare,4,5,Medicina Interna,9,7.84444
+Stan,Andrei,1880404123456,M,36,04.04.1988,Bucuresti,5,romana,asistent,studii superioare,10,1,Neurologie,1,9
+Vasile,Ana,2950505123456,F,29,05.05.1995,Bucuresti,1,romana,asistent,studii superioare,3,4,Neurologie,7,7.14285
+Matei,Florin,1920606123456,M,32,06.06.1992,Bucuresti,6,romana,asistent,studii superioare,6,8,Endocrinologie,9,8.3
+Preda,Irina,2930707123456,F,31,07.07.1993,Bucuresti,2,romana,asistent,studii superioare,8,8,Endocrinologie,12,8.90833
+Tudor,Bogdan,1900808123456,M,34,08.08.1990,Bucuresti,3,romana,asistent,studii superioare,9,5,ORL,4,9.4
+Luca,Andreea,2890909123456,F,35,09.09.1989,Bucuresti,1,romana,asistent,studii superioare,7,4,Gastroenterologie,5,7.8
+Radu,Marius,1871010123456,M,37,10.10.1987,Bucuresti,5,romana,asistent,studii superioare,11,1,Nefrologie,2,9.6
+Sucescu,Simona,1961111123456,F,28,11.11.1996,Bucuresti,2,romana,asistent,studii superioare,4,4,Psihiatrie,6,8
+Crin,Sorin,1901212123456,M,34,12.12.1990,Bucuresti,3,romana,asistent,studii superioare,6,3,Cardiologie,6,6.46667
+Dimitrian,Alina,2950101123456,F,29,01.01.1995,Bucuresti,4,romana,asistent,studii superioare,3,4,Dermatologie,5,7.56
+Petrescu,Alex,1880202123456,M,36,02.02.1988,Bucuresti,6,romana,asistent,studii superioare,10,6,ORL,5,9.1
+Ardei,Cristina,2910303123456,F,33,03.03.1991,Bucuresti,3,romana,asistent,studii superioare,6,7,Nutritie,10,8

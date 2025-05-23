@@ -1,0 +1,12 @@
+Bucur,Mario,bucuresti,Fractura membru superior, D746,0
+Bucur,Vladut,bucuresti,Pneumonie,  D487,0
+Bucur,Miru,bucuresti,Meningita virala,   D987,0
+Bucur,Miru,Bucuresti,Angina pectorala,         D258,0
+Sandu,Crina,bucuresti,Fractura membru superior,                                                D947,0
+Nuegru,Sindel,bucuresti,Pneumonie,                                                       D824,0
+Caramida,Mara,Bucuresti,Meningita virala,D486,0
+Cristal,Ana,bucuresti,Hipertensiune arteriala,D982,0
+Caramiduta,Andut,bucuresti,Boli si tulburari ale sistemului nervos,D486,0
+Sare,Antonia,bucuresti,Angina pectorala,D280,0
+Tomis,Aless,bucuresti,Angina pectorala,D280,0
+Andu,Cristina,bucuresti,Boli si tulburari ale sistemului nervos,D486,0
