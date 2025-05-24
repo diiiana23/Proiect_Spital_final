@@ -142,25 +142,27 @@ int Pacient::gradProblema() const
         diagnostic_principal == "Laringotraheita" ||
         diagnostic_principal == "Alergie sezoniera")
         return 1;
-    if (diagnostic_principal == "Fractura membru superior" ||
+    else if (diagnostic_principal == "Fractura membru superior" ||
         diagnostic_principal == "Covid-19" ||
         diagnostic_principal == "Oboseala cronica" ||
         diagnostic_principal == "Anemie")
         return 2;
-    if (diagnostic_principal == "Hipertensiune arteriala" ||
+    else if (diagnostic_principal == "Hipertensiune arteriala" ||
         diagnostic_principal == "Criza de astm bronsic" ||
         diagnostic_principal == "Pneumonie" ||
         diagnostic_principal == "Migrena severa")
         return 3;
-    if (diagnostic_principal == "Diabet zaharat dezechilibrat" ||
+    else if (diagnostic_principal == "Diabet zaharat dezechilibrat" ||
         diagnostic_principal == "Boli si tulburari ale sistemului nervos" ||
         diagnostic_principal == "Angina pectorala" ||
         diagnostic_principal == "Infectiile acute majore ale ochiului")
         return 4;
-    if (diagnostic_principal == "Apendicita acuta" ||
+    else if (diagnostic_principal == "Apendicita acuta" ||
         diagnostic_principal == "Meningita virala" ||
         diagnostic_principal == "Accident vascular ischemic")
         return 5;
+    else
+        return 0;
 }
 
 std::string Pacient::tipMedic() const
