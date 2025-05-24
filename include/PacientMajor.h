@@ -30,7 +30,7 @@ public:
     void setStareDonare(StareDonare* stare);
     void afiseazaStareDonare() const;
 
-    ~PacientMajor();
+    ~PacientMajor() override;
 };
 
 #endif

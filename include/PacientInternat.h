@@ -18,14 +18,15 @@ private:
 
 public:
     // Constructori
-    PacientInternat() = default;
+    //PacientInternat() = default;
+    PacientInternat() : zile_ramase(0) {}
 
     PacientInternat(const std::string& nume,
                     const std::string& prenume,
                     const std::string& diagnostic,
                     const std::string& localitate,
                     const std::string& cod_doctor,
-                    int zile_ramase);
+                    int zile_ramase = 0);
 
     // Gett
     const std::string& getNume() const;

@@ -41,7 +41,7 @@ public:
     // Gettere
     int getAniExperienta() const;
     int getAniDeAngajare() const;
-    std::string getSpecializare() const;
+    const std::string& getSpecializare() const;
     int getNrConsultatii() const;
     double getReview() const;
 

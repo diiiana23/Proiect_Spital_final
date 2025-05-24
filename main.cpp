@@ -233,22 +233,22 @@ int main()
     std::cout << "Va rugam sa alegeti medicul care va inspira cea mai multa incredere \n";
     std::cout << "(mentionati cifra corespunzatoare acestuia): ";
 
-    int alegere;
-    std::cin >> alegere;
-    if (alegere<1 || alegere > indici_aux.size())             //verific daca e valida alegerea
+    int alg;
+    std::cin >> alg;
+    if (alg<1 || alg > indici_aux.size())             //verific daca e valida alegerea
     {
         std::cout << "Alegere invalida. \n";
         std::cout << "Va rugam sa introduceti un numar valid, din lista de mai sus, pentru a continua operatiunea! \n";
         std::cout << "(mentionati cifra corespunzatoare acestuia): ";
-        std::cin >> alegere;
-        if (alegere<1 || alegere > indici_aux.size())
+        std::cin >> alg;
+        if (alg<1 || alg > indici_aux.size())
         {
             std::cout << "Alegere invalida. Procedura anulata. \n";
             return 0;
         }
     }
     std::cout << "\n";
-    int ind = indici_aux[alegere-1];
+    int ind = indici_aux[alg-1];
     std::cout <<"O alegere excelenta! L-ati ales pe Dr. " << FunctiiAjutatoare::trim(doctori[ind].getNume()) <<" " << FunctiiAjutatoare::trim(doctori[ind].getPrenume()) << " \n";
     std::cout << "\n";
 
@@ -263,8 +263,10 @@ int main()
     std::cout << "\n";
 
     // op += (membru) - creste de fiecare data nr de consultatii totale
-    consultatie += 1;
-    std::cout << "Numar total de consultatii efectuate: " << Consultatie::getNrConsultatii() << "\n";
+    //consultatie += 1;
+    static_cast<void>(consultatie += 1);
+    int total = Consultatie::getNrConsultatii();
+    std::cout << "Numar total de consultatii efectuate: " << total << "\n";
     std::cout << "\n";
 
     // INTERNARILE
