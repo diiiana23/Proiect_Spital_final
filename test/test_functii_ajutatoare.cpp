@@ -20,7 +20,7 @@ class TestPacient : public Pacient {
     int grad;
 public:
     TestPacient(int grad_)
-        : Pacient("Nume", "Prenume", "1234567890123", 'F', 35, "01-01-1990",
+        : Pacient("Nume", "Prenume", "1234567890123", 'F', 35, "01.01.1990",
                   "Bucuresti", 2, "Romana", "Programator", "Universitar",
                   "A", "+", "Nu", "Da"),
           grad(grad_) {}
