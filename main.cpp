@@ -225,7 +225,7 @@ int main()
         std::cout << "Va rugam sa reveniti mai tarziu pentru a putea beneficia de o procedura completa! \n";
         return 0;
     }
-    for (int i=0; i<indici_aux.size(); i++)
+    for (size_t i=0; i<indici_aux.size(); i++)
     {
         const Doctor& doc = doctori[indici_aux[i]];
         std::cout << i+1 <<" : "<< FunctiiAjutatoare::trim(doc.getNume()) <<" "<< FunctiiAjutatoare::trim(doc.getPrenume()) <<", ";
@@ -237,7 +237,8 @@ int main()
 
     int alg;
     std::cin >> alg;
-    if (alg<1 || alg > indici_aux.size())             //verific daca e valida alegerea
+    // if (alg < 1 || alg > indici_aux.size())
+    if (alg < 1 || static_cast<size_t>(alg) > indici_aux.size())             //verific daca e valida alegerea
     {
         std::cout << "Alegere invalida. \n";
         std::cout << "Va rugam sa introduceti un numar valid, din lista de mai sus, pentru a continua operatiunea! \n";

@@ -109,12 +109,12 @@ void UnitateMedicala::elibereazaMedic()
 void UnitateMedicala::afiseaza() const
 {
     std::cout << "     - UNITATE MEDICALA -     \n";
-    std::cout << "Nume: " << nume << "\n";
-    std::cout << "Cod: " << cod << "\n";
-    std::cout << "Oras: " << oras << "\n";
-    std::cout << "Capacitate: " << nr_paturi_total << "\n";
-    std::cout << "Capacitate disponibila: " << nr_paturi_disponibile << "\n";
-    std::cout << "Personal medical: " << nr_medici_total << "\n";
-    std::cout << "Personal medical disponibil: " << nr_medici_disponibili << "\n";
+    std::cout << "Nume: " << getNume() << "\n";
+    std::cout << "Cod: " << getCod() << "\n";
+    std::cout << "Oras: " << getOras() << "\n";
+    std::cout << "Capacitate: " << getNrPaturiTotale() << "\n";
+    std::cout << "Capacitate disponibila: " << getNrPaturiDisponibile() << "\n";
+    std::cout << "Personal medical: " << getNrMediciTotali() << "\n";
+    std::cout << "Personal medical disponibil: " << getNrMediciDisponibili() << "\n";
     std::cout << "\n";
 }
