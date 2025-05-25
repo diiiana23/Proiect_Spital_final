@@ -378,13 +378,13 @@ int main()
         int alegere;
         std::cout << "Alegeti asistentul dorit (numar): ";
         std::cin >> alegere;
-        if (alegere<1 && alegere > static_cast<int>(potriviti.size()))
+        if (alegere<1 || alegere > static_cast<int>(potriviti.size()))
         {
             std::cout << "Alegere invalida. \n";
             std::cout << "Va rugam introduceti un nr valid, din lista de mai sus, pentru a continua operatiunea! \n";
             std::cout << "(mentionati cifra corespunzatoare acestuia): ";
             std::cin >> alegere;
-            if (alegere<1 && alegere > static_cast<int>(potriviti.size()))
+            if (alegere<1 || alegere > static_cast<int>(potriviti.size()))
             {
                 std::cout << "Alegere invalida. Procedura anulata. \n";
                 return 0;
