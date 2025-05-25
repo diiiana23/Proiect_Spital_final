@@ -40,7 +40,7 @@ TEST_F(DoctorTest, TestDescriereExperientaRezident) {
     EXPECT_EQ(rez.descriereExperienta(), "Anul 2 de rezidentiat");
 }
 
-TEST_F(DoctorTest, TestOperator==) {
+TEST_F(DoctorTest, TestOperatorEgal) {
     Doctor d2("Elena", "Georgescu", "1234567890123", 'F', 40, "12.12.1983", "Bucuresti", 3, "romana",
               "medic", "universitar", "Pediatrie", "D567", "Specialist", "Pediatrie", 15, 0, true);
     EXPECT_TRUE(*doc == d2);

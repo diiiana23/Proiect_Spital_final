@@ -121,6 +121,8 @@ include(FetchContent)
 #
 FetchContent_MakeAvailable(googletest)
 
+include_directories(SYSTEM ${gtest_SOURCE_DIR}/include)
+
 ###############################################################################
 
 # external dependencies with find_package
