@@ -28,7 +28,8 @@ void MesajePacienti::afiseaza_Mesaj(int poz)
         if (poz == i)
         {
             std::cout << "Mesajul de incurajare pentru pacient este: \n";
-            std::cout << " ❤️ " << mesaj << "\n";
+            std::cout << "\n";
+            std::cout << mesaj << "\n";
             std::cout << "\n";
             return;
         }

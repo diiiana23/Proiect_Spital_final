@@ -29,14 +29,14 @@ int main()
     UnitateMedicala* spital = UnitateMedicala::getInstanta(); // SINGLETON
     spital->incarc_Fisier();
     std::cout << "\n";
-    std::cout << "Bine ati venit in sistemul nostru medical! 🩺 \n";
+    std::cout << "Bine ati venit in sistemul nostru medical!  \n";
     std::cout << "\n";
     spital->afiseaza();
 
     // Mesaj incurajator
     MesajePacienti::init_Mesaje();
     int nr_mes = MesajePacienti::getNrMesaje();
-    std::cout << "Alegeti un numar intre 1 si " << nr_mes << " pentru a primi un mesaj incurajator 😊: ";
+    std::cout << "Alegeti un numar intre 1 si " << nr_mes << " pentru a primi un mesaj incurajator : ";
     int poz;
     std::cin >> poz;
     MesajePacienti::afiseaza_Mesaj(poz);
@@ -51,7 +51,7 @@ int main()
     std::cout << "\n";
     std::cout << "Totul va fi bine! Va asiguram ca sunteti pe maini bune. \nExpertii nostri din domeniu fiind pregatiti pentru orice fel de urgenta. \n";
     std::cout << "Pentru a va putea oferi ajutorul calificat de care aveti nevoie, va rugam sa completati urmatoarele date. \nNoi, pe parcursul completarii dumneavoastra, va vom informa cu privire le fiecare mic detaliu. \n";
-    std::cout << "Va dorim insanatosire grabnica si multa putere! ❤️ \n";
+    std::cout << "Va dorim insanatosire grabnica si multa putere! \n";
     std::cout << "\n";
 
     std::cout << "Pentru a va oferi ingrijirile medicale corespunzatoare, va vom ruga sa introduceti datele urmatoare: \n";
@@ -148,7 +148,7 @@ int main()
         std::cout << "Ne cerem scuze pentru eventualul disconfort creat.\n";
         std::cout << "Se pare ca sunteti din alt oras, asa ca va recomandam sa cautati o unitate medicala mai aproape de";
         std::cout << pacient->getLocalitate() << "\n";
-        std::cout << "Va dorim multa sanatate! ❤️ \n";
+        std::cout << "Va dorim multa sanatate! \n";
         std::cout << "\n";
         return 0;
     }
@@ -177,7 +177,7 @@ int main()
         if (raspuns_asig != "da")
         {
             std::cout << "Ne pare rau ca ati ales sa nu continuati.\n";
-            std::cout << "Va dorim multa sanatate si insanatosire grabnica! ❤️ \n";
+            std::cout << "Va dorim multa sanatate si insanatosire grabnica! \n";
             return 0;
         }
         std::cout << "Va multumim ca ati ales sa continuati alaturi de echipa noastra medicala!";
@@ -221,7 +221,7 @@ int main()
     if (indici_aux.empty())         // daca nu e niciun medic disponibil
     {
         std::cout << "Ne cerem scuze, se pare ca toti medicii specializati in " << FunctiiAjutatoare::Specializare_Problema(pacient->getDiagnosticPrincipal())
-                  << " sunt la momentul actual ocupati. 😔 \n";
+                  << " sunt la momentul actual ocupati. \n";
         std::cout << "Va rugam sa reveniti mai tarziu pentru a putea beneficia de o procedura completa! \n";
         return 0;
     }
@@ -238,13 +238,13 @@ int main()
     int alg;
     std::cin >> alg;
     // if (alg < 1 || alg > indici_aux.size())
-    if (alg < 1 || static_cast<size_t>(alg) > indici_aux.size())             //verific daca e valida alegerea
+    if (alg<1 || alg > static_cast<int>(indici_aux.size()))
     {
         std::cout << "Alegere invalida. \n";
         std::cout << "Va rugam sa introduceti un numar valid, din lista de mai sus, pentru a continua operatiunea! \n";
         std::cout << "(mentionati cifra corespunzatoare acestuia): ";
         std::cin >> alg;
-        if (alg<1 || alg > indici_aux.size())
+        if (alg<1 || alg > static_cast<int>(indici_aux.size()))
         {
             std::cout << "Alegere invalida. Procedura anulata. \n";
             return 0;
@@ -411,7 +411,7 @@ int main()
     std::cout << "Va multumim ca ati ales Spitalul Clinic Universitar! \n";
     std::cout << "Echipa noastra va doreste multa sanatate, incredere si o recuperare rapida. \n";
     std::cout << "\n";
-    std::cout << "Va dorim toate cele bune, aveti grija de dumneavoastra si nu uitati ca sanatatea este cea mai de pret comoara!❤️ \n";
+    std::cout << "Va dorim toate cele bune, aveti grija de dumneavoastra si nu uitati ca sanatatea este cea mai de pret comoara! \n";
 
     delete pacient;
 
