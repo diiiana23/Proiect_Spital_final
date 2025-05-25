@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing executable name in this file
 # for now, the project name is used as the executable name
-set(MAIN_PROJECT_NAME "oop")
+set(MAIN_PROJECT_NAME "ProiectSpital")
 set(MAIN_EXECUTABLE_NAME "${MAIN_PROJECT_NAME}")
 
 
@@ -130,7 +130,29 @@ FetchContent_MakeAvailable(googletest)
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES})
+add_executable(${MAIN_EXECUTABLE_NAME}
+        main.cpp
+        ${SOURCES}
+        include/AfisareInformatii.h
+        include/AsistentMedical.h
+        include/UnitateMedicala.h
+        include/StareDonator.h
+        include/Consultatie.h
+        include/Doctor.h
+        include/Donator.h
+        include/Exceptii.h
+        include/FunctiiAjutatoare.h
+        include/ListaAsistenti.h
+        include/ListaDoctori.h
+        include/Meniu.h
+        include/Mesaje.h
+        include/Pacient.h
+        include/PacientInternat.h
+        include/PacientMajor.h
+        include/PacientMinor.h
+        include/Persoana.h
+        include/UnitateMedicala.h
+)
 
 # NOTE: Add all defined targets (e.g. executables, libraries, etc. )
 # NOTE: RUN_SANITIZERS is optional, if it's not present it will default to true
@@ -158,22 +180,26 @@ if(APPLE)
 endif()
 
 ###############################################################################
-#enable_testing()
-#
-#add_executable(
-#        test_oop
-#        ${HEADERS}
-#        ${TESTS}
-#        ${SOURCES}
-#)
-#
-#target_link_libraries(
-#        test_oop
-#        GTest::gtest_main
-#)
-#
-#include(GoogleTest)
-#gtest_discover_tests(test_oop)
+enable_testing()
+
+add_executable(
+        test_oop
+        ${HEADERS}
+        ${TESTS}
+        ${SOURCES}
+)
+
+target_link_libraries(
+        test_oop
+        GTest::gtest
+        GTest::gtest_main
+)
+
+target_include_directories(test_oop PRIVATE ${gtest_SOURCE_DIR}/include)
+target_include_directories(test_oop PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/test)
+
+include(GoogleTest)
+gtest_discover_tests(test_oop)
 copy_files(FILES tastatura.txt COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
 # copy_files(FILES tastatura.txt config.json DIRECTORY images sounds COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})
 # copy_files(DIRECTORY images sounds COPY_TO_DESTINATION TARGET_NAME ${MAIN_EXECUTABLE_NAME})

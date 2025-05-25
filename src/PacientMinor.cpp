@@ -38,7 +38,7 @@ void PacientMinor::procesareSpeciala() const
     else
     {
         std::cout << "Ne pare rau ca ati ales să nu continuați. \n";
-        std::cout << "Va dorim multa sanatate si o insanatosire grabnica! ❤️ \n";
+        std::cout << "Va dorim multa sanatate si o insanatosire grabnica! \n";
     }
 }
 
