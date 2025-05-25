@@ -184,6 +184,8 @@ int main()
         {
             std::cout << "Ne pare rau ca ati ales sa nu continuati.\n";
             std::cout << "Va dorim multa sanatate si insanatosire grabnica! \n";
+
+            delete pacient;
             return 0;
         }
         std::cout << "Va multumim ca ati ales sa continuati alaturi de echipa noastra medicala!";
@@ -203,6 +205,8 @@ int main()
     {
         std::cout << "doctori.txt nu exista. Se genereaza lista initiala de doctori... \n";
         std::cout << "Lista de doctori a fost salvata! \n";
+
+        delete pacient;
         std::cout << "\n";
 
         doctori = ListaDoctori::creeazaDoctori();
@@ -229,6 +233,8 @@ int main()
         std::cout << "Ne cerem scuze, se pare ca toti medicii specializati in " << FunctiiAjutatoare::Specializare_Problema(pacient->getDiagnosticPrincipal())
                   << " sunt la momentul actual ocupati. \n";
         std::cout << "Va rugam sa reveniti mai tarziu pentru a putea beneficia de o procedura completa! \n";
+
+        delete pacient;
         return 0;
     }
     for (size_t i=0; i<indici_aux.size(); i++)
@@ -253,6 +259,8 @@ int main()
         if (alg<1 || alg > static_cast<int>(indici_aux.size()))
         {
             std::cout << "Alegere invalida. Procedura anulata. \n";
+
+            delete pacient;
             return 0;
         }
     }
