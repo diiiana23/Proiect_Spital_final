@@ -1,5 +1,6 @@
 #include "UnitateMedicala.h"
 #include <iostream>
+#include <fstream>
 
 // Inițializez pointer static la SINGLETON
 UnitateMedicala* UnitateMedicala::instanta = nullptr;
@@ -49,6 +50,33 @@ int UnitateMedicala::getNrMediciTotali() const
 int UnitateMedicala::getNrMediciDisponibili() const
 {
     return nr_medici_disponibili;
+}
+
+// fisier pt datele pe care vreau sa le salvez dinamic
+void UnitateMedicala::salvez_Fisier() const
+{
+    std::ofstream out("unitate_medicala.txt");
+    if (!out)
+    {
+        std::cerr << "Eroare la deschiderea fisierului pentru actualizarea datelor medicale.\n";
+        return;
+    }
+    out << nr_paturi_disponibile << "\n";
+    out << nr_medici_disponibili << "\n";
+    out.close();
+}
+
+void UnitateMedicala::incarc_Fisier()
+{
+    std::ifstream in("unitate_medicala.txt");
+    if (!in)
+    {
+        std::cerr << "Fisierul unitate_medicala.txt nu a fost gasit. Se folosesc valorile implicite.\n";
+        return;
+    }
+    in >> nr_paturi_disponibile;
+    in >> nr_medici_disponibili;
+    in.close();
 }
 
 // Actualizez paturi

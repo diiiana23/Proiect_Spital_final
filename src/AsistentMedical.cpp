@@ -53,7 +53,7 @@ int AsistentMedical::getAniDeAngajare() const
     return ani_de_angajare;
 }
 
-std::string AsistentMedical::getSpecializare() const
+const std::string& AsistentMedical::getSpecializare() const
 {
     return specializare;
 }

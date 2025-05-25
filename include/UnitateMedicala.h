@@ -15,7 +15,7 @@ private:
     int nr_paturi_total = 240;
     int nr_paturi_disponibile = 240;
     int nr_medici_total = 40;
-    int nr_medici_disponibili = 24;
+    int nr_medici_disponibili = 40;
 
 public:
     // Acces global la instanta Singleton
@@ -27,6 +27,10 @@ public:
     const std::string& getNume() const;
     const std::string& getCod() const;
     const std::string& getOras() const;
+
+    void salvez_Fisier() const;
+    void incarc_Fisier();
+
     int getNrPaturiTotale() const;
     int getNrPaturiDisponibile() const;
     int getNrMediciTotali() const;

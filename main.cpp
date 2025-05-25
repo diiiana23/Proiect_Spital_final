@@ -27,6 +27,7 @@ int main()
 {
     // date SPITAL
     UnitateMedicala* spital = UnitateMedicala::getInstanta(); // SINGLETON
+    spital->incarc_Fisier();
     std::cout << "\n";
     std::cout << "Bine ati venit in sistemul nostru medical! 🩺 \n";
     std::cout << "\n";
@@ -211,6 +212,7 @@ int main()
     }
 
     PacientInternat::actualizare_Internari(doctori, *spital);     //fct mare de ACTUALIZARE pacient + doctor
+    spital->salvez_Fisier();
 
     // lista doctori potriviti pt un anumit pacient
     std::vector<int> indici_aux = FunctiiAjutatoare::gasesc_DoctoriPotriviti(*pacient, doctori);       //fct care imi determina vector de indici
@@ -291,6 +293,8 @@ int main()
 
         spital->ocupaPat();
         spital->ocupaMedic();
+
+        spital->salvez_Fisier();
     }
 
     // DIAGNOSTIC SECUNDAR
@@ -331,13 +335,14 @@ int main()
     {
         std::cout << "Lista asistentilor care va pot ajuta: \n";
 
-        for (size_t i=0; i < potriviti.size(); i++)
-        {
-            std::cout << i+1 << ". ";
-            Persoana* p = new AsistentMedical(potriviti[i]);     // UPCAST la pointer ul de baza
-            p->afiseaza();          // apel polimorfic
-            delete p;
-        }
+        // for (size_t i=0; i < potriviti.size(); i++)
+        // {
+        //     std::cout << i+1 << ". ";
+        //     Persoana* p = new AsistentMedical(potriviti[i]);     // UPCAST la pointer ul de baza
+        //     p->afiseaza();          // apel polimorfic
+        //     delete p;
+        // }
+        ListaAsistenti::afiseazaAsistenti(potriviti);
 
         std::string criteriu;
         std::cout << "Doriti sa sortati lista dupa un anumit criteriu? (experienta / angajare / review): ";

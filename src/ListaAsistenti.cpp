@@ -95,9 +95,13 @@ void ListaAsistenti::salvezA_fisier(const std::vector<AsistentMedical>& lista)
 // Afișarea fiecărui asistent (cu polimorfism)
 void ListaAsistenti::afiseazaAsistenti(const std::vector<AsistentMedical>& lista)
 {
-    for (const auto& a : lista) {
+    int i=1;
+    for (const auto& a : lista)
+    {
+        std::cout << i << ". ";
         Persoana* p = new AsistentMedical(a);
         p->afiseaza();
+        i++;
         delete p;
     }
 }
