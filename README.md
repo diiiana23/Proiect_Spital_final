@@ -1,4 +1,6 @@
-# Nu primesc notă pentru că nu am pus titlu și descriere
+Proiect SPITAL - POO
+
+Proiectul este realizat in scopul de a simula o spitalizare completa a unui pacient, dar ofera si posibilitatea de a putea afla mai multe date relevante despre acesta.
 
 ### Folosiți template-ul corespunzător grupei voastre!
 
