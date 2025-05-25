@@ -1,9 +1,13 @@
 Proiect SPITAL - POO
 
 Proiectul este realizat in scopul de a simula o spitalizare completa a unui pacient, dar ofera si posibilitatea de a putea afla mai multe date relevante despre acesta.
+
 In incercarea de a face proiectul cat mai realist si interactiv, in cazul in care pacientul doreste sa afle mai multe detalii despre personalul medical sau despre ceilalti pacienti care au apelat la serviciile spitalul, acesta poate selecta optiunea/optiunile dorite si astfel va fi informat in legatura cu acel aspect. De asemenea, datele introduse sunt mereu verificate si validate.
+
 Sistemul verifica automat: validitatea si corectitudinea datelor introduse (CNP, data nasterii, sector, etc), compatibilitatea orasului de domiciliu cu cel al unitatii medicale, varsta pacientului (pentru a determina daca este major sau minor - in acest caz fiind nevoie de prezentarea unui acord pentru a continua operatiunea).
+
 Pacientul are posibilitatea de a afla informatii despre: personalul medical (doctori si asistenti), alti pacienti (inregistrati, vindecati sau internati), lista cu donatorii de sange. De asemenea, in cazuri extreme se poate efectua concedierea/angajarea unui medic.
+
 Pe parcursul inregistrarii, pacientul poate lua decizii interactive, precum: afisajul unui mesaj de incurajare la inceput, donarea de sange, continuarea/intreruperea procedurii (in cazul in care pacientul nu e asigurat, vor exista costuri suplimentare), alegerea unui asistent medical (pentru tratarea diagnosticului secundar) in functie de experienta acestuia/review-ul primit de la ceilalti pacienti pe care i-a tratat).
 
 ### Folosiți template-ul corespunzător grupei voastre!
