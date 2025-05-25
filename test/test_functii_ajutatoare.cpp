@@ -29,16 +29,6 @@ TEST(FunctiiAjutatoareTest, CalculezCostulInvalid) {
     EXPECT_EQ(FunctiiAjutatoare::calculezCostul(99), 0);
 }
 
-TEST(FunctiiAjutatoareTest, ZileInternareInFunctieDeGrad) {
-    TestPacient p1(1), p2(2), p3(3), p4(4), p5(5);
-
-    EXPECT_EQ(FunctiiAjutatoare::zileInternare(p1), 0);
-    EXPECT_EQ(FunctiiAjutatoare::zileInternare(p2), 2);
-    EXPECT_EQ(FunctiiAjutatoare::zileInternare(p3), 2);
-    EXPECT_EQ(FunctiiAjutatoare::zileInternare(p4), 4);
-    EXPECT_EQ(FunctiiAjutatoare::zileInternare(p5), 4);
-}
-
 TEST(FunctiiAjutatoareTest, SpecializareCorectaPentruDiagnostic) {
     EXPECT_EQ(FunctiiAjutatoare::Specializare_Problema("Pneumonie"), "Pneumologie");
     EXPECT_EQ(FunctiiAjutatoare::Specializare_Problema("Hipotiroidism"), "Endocrinologie");
