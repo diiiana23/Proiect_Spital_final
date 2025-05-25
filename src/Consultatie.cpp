@@ -54,7 +54,8 @@ Consultatie& Consultatie::operator+=(int nr)
 // op + NON-MEMBRU
 Consultatie operator+(const Pacient& p, const Doctor& d)
 {
-    return Consultatie("Spitalul Clinic Universitar", p, d);
+    //return Consultatie("Spitalul Clinic Universitar", p, d);
+    return {"Spitalul Clinic Universitar", p, d};
 }
 
 // op << AFISARE

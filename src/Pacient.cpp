@@ -130,7 +130,7 @@ void Pacient::genereazaDiagnostic()
         "Sinuzita",
         "Deficit de vitamina D"
     };
-    std::srand(std::time(nullptr));     // la fiecare sec de rulare da altceva
+  //  std::srand(std::time(nullptr));     // la fiecare sec de rulare da altceva
     diagnostic_principal = principal[std::rand() % principal.size()];
     diagnostic_secundar = secundar[std::rand() % secundar.size()];
 }
@@ -232,7 +232,7 @@ void Pacient::salveazaInFisier() const
 
     // daca e pacient nou, il adaug
     std::ofstream out("pacienti_inregistrati.txt", std::ios::app);
-    out << getNume() <<" "<< getPrenume() <<" - "<< getCNP() << "\n";
+    out << getNume() <<","<< getPrenume() <<","<< getCNP() << "\n";
     out.close();
 
     std::cout << "Pacientul a fost salvat cu succes în fisier. \n";

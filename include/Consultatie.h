@@ -33,9 +33,9 @@ public:
     //OPERATORI
     Consultatie& operator+=(int); // crește nr consultatii   ( += membru)
 
-    friend Consultatie operator+(const Pacient& p, const Doctor& d); // (+ non-membru)
-
     friend std::ostream& operator<<(std::ostream& out, const Consultatie& c);  // (<<)
 };
+
+Consultatie operator+(const Pacient& p, const Doctor& d); // (+ non-membru)
 
 #endif

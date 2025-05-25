@@ -20,11 +20,15 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <string>
 #include <vector>
 
 int main()
 {
+    std::srand(std::time(nullptr));     // la fiecare sec de rulare da altceva (pt diagnostic)
+
     // date SPITAL
     UnitateMedicala* spital = UnitateMedicala::getInstanta(); // SINGLETON
     spital->incarc_Fisier();
@@ -150,6 +154,8 @@ int main()
         std::cout << pacient->getLocalitate() << "\n";
         std::cout << "Va dorim multa sanatate! \n";
         std::cout << "\n";
+
+        delete pacient;
         return 0;
     }
 
@@ -260,8 +266,7 @@ int main()
 
     //CONSULTATIA
     // op + (non-membru) - afisare consultatie
-    Consultatie operator+(const Pacient& p, const Doctor& d);
-    Consultatie consultatie = (*pacient) + doctori[ind];
+    Consultatie consultatie= (*pacient) + doctori[ind];
     std::cout << consultatie;
     std::cout << "\n";
 
@@ -365,13 +370,13 @@ int main()
         int alegere;
         std::cout << "Alegeti asistentul dorit (numar): ";
         std::cin >> alegere;
-        if (alegere<1 && alegere > (int)potriviti.size())
+        if (alegere<1 && alegere > static_cast<int>(potriviti.size()))
         {
             std::cout << "Alegere invalida. \n";
             std::cout << "Va rugam introduceti un nr valid, din lista de mai sus, pentru a continua operatiunea! \n";
             std::cout << "(mentionati cifra corespunzatoare acestuia): ";
             std::cin >> alegere;
-            if (alegere<1 && alegere > (int)potriviti.size())
+            if (alegere<1 && alegere > static_cast<int>(potriviti.size()))
             {
                 std::cout << "Alegere invalida. Procedura anulata. \n";
                 return 0;
@@ -414,6 +419,7 @@ int main()
     std::cout << "Va dorim toate cele bune, aveti grija de dumneavoastra si nu uitati ca sanatatea este cea mai de pret comoara! \n";
 
     delete pacient;
+    pacient = nullptr;
 
     return 0;
 }
