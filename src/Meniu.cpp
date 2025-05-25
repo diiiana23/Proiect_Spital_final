@@ -13,6 +13,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <limits>
 
 void Meniu::afisez_PacientiInregistrati()
 {
