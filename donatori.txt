@@ -1,0 +1,10 @@
+Cioban,Andrei,22,AB
+Ceraceanu, Claudia, 25, AB
+Alexandrescu, Elena, 34, AB
+Dana, Stefan, 20, AB
+Bucur, Adrian, 35, B
+Bucur, Adrian, 35, AB
+Bucur, Daniel, 32, A
+Alexandrescu, Diana, 19, AB
+Andu, Sorin, 23, A
+Toma, Andrei, 25, B
