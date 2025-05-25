@@ -216,10 +216,10 @@ void Pacient::salveazaInFisier() const
     while (std::getline(in, linie))
     {
         std::istringstream format(linie);
-        std::string nume, prenume, cnp_fisier;
+        std::string numeF, prenumeF, cnp_fisier;
 
-        std::getline(format, nume, ',');
-        std::getline(format, prenume, ',');
+        std::getline(format, numeF, ',');
+        std::getline(format, prenumeF, ',');
         std::getline(format, cnp_fisier, ',');
 
         if (cnp_fisier == this->getCNP())
