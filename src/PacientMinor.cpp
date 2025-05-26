@@ -21,7 +21,7 @@ PacientMinor::PacientMinor(const std::string& nume,
         grupa_sanguina, RH, alergii, asigurare)
 {}
 
-void PacientMinor::procesareSpeciala() const
+void PacientMinor::procesareSpeciala()
 {
     std::string acord;
     std::cout << "Este necesar acordul unui parinte/tutore pentru continuarea tratamentului. \n";

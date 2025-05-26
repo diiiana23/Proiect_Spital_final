@@ -180,7 +180,7 @@ int main()
         std::cin >> raspuns_asig;
         std::transform(raspuns_asig.begin(), raspuns_asig.end(), raspuns_asig.begin(), ::tolower);   //litere mici
         std::cout << "\n";
-        if (raspuns_asig != "da")
+        if (raspuns_asig == "nu")
         {
             std::cout << "Ne pare rau ca ati ales sa nu continuati.\n";
             std::cout << "Va dorim multa sanatate si insanatosire grabnica! \n";
@@ -387,6 +387,9 @@ int main()
             if (alegere<1 || alegere > static_cast<int>(potriviti.size()))
             {
                 std::cout << "Alegere invalida. Procedura anulata. \n";
+
+                delete pacient;
+                pacient = nullptr;
                 return 0;
             }
         }

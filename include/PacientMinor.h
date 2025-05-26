@@ -21,7 +21,7 @@ public:
                  const std::string& alergii,
                  const std::string& asigurare);
 
-    void procesareSpeciala() const override;  // acord parinte
+    void procesareSpeciala() override;  // acord parinte
 };
 
 #endif

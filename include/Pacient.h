@@ -62,7 +62,7 @@ public:
     virtual int gradProblema() const;            // 1 (rezident), 2/3 (specialist), 4/5 (primar)
     std::string tipMedic() const;        // rezident, specialist, primar
 
-    virtual void procesareSpeciala() const = 0;  //clasa devine abstracta
+    virtual void procesareSpeciala() = 0;  //clasa devine abstracta
 
     void salveazaInFisier() const;     // salvez pacientii in "pacienti_inregistrati.txt"
 };

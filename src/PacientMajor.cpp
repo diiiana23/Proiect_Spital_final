@@ -44,18 +44,18 @@ PacientMajor::~PacientMajor()
 }
 
 
-void PacientMajor::procesareSpeciala() const
+void PacientMajor::procesareSpeciala()
 {
     std::string raspuns;
     std::cout << "Doriti sa donati sange? (DA/NU): ";
     std::cin >> raspuns;
     std::cout << "\n";
 
-    PacientMajor* self = const_cast<PacientMajor*>(this);  // pentru a modifica membrii non-const
+    // PacientMajor* self = const_cast<PacientMajor*>(this);  // pentru a modifica membrii non-const
 
     if (raspuns == "DA" || raspuns == "da")
     {
-        self->setStareDonare(new ADonat());
+        this->setStareDonare(new ADonat());
 
         std::ofstream fout("donatori.txt", std::ios::app);
         fout << this->getNume() <<", "<< this->getPrenume() <<", "<< this->getVarsta() <<", "<< this->getGrupaSanguina() << "\n";
@@ -63,8 +63,8 @@ void PacientMajor::procesareSpeciala() const
     }
     else
     {
-        self->setStareDonare(new NuADonat());
+        this->setStareDonare(new NuADonat());
     }
     std::cout << "\n";
-    self->afiseazaStareDonare();
+    this->afiseazaStareDonare();
 }
