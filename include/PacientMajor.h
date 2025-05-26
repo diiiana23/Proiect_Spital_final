@@ -25,7 +25,7 @@ public:
                  const std::string& alergii,
                  const std::string& asigurare);
 
-    void procesareSpeciala() override;  // donare sange
+    void procesareSpeciala() const override;  // donare sange
 
     void setStareDonare(StareDonare* stare);
     void afiseazaStareDonare() const;
